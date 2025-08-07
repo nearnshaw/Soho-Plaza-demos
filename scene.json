@@ -125,22 +125,22 @@
       "default": true,
       "position": {
         "x": [
-          0,
-          3
+          68,
+          71
         ],
         "y": [
           0,
           0
         ],
         "z": [
-          0,
-          3
+          68,
+          71
         ]
       },
       "cameraTarget": {
-        "x": 8,
+        "x": 100,
         "y": 1,
-        "z": 8
+        "z": 100
       }
     }
   ],
@@ -155,5 +155,6 @@
   "source": {
     "origin": "creator-hub",
     "projectId": "db7bf43c-fa2b-42d2-a53f-e11331cacc4a"
-  }
+  },
+  "skyboxConfig": {}
 }

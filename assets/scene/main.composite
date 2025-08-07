@@ -97,16 +97,16 @@
               "y": 17.724760055541992,
               "z": 45
             },
+            "scale": {
+              "x": 0.75,
+              "y": 0.75,
+              "z": 0.75
+            },
             "rotation": {
               "x": 0,
               "y": 0,
               "z": 0,
               "w": 1
-            },
-            "scale": {
-              "x": 0.75,
-              "y": 0.75,
-              "z": 0.75
             },
             "parent": 517
           }
@@ -118,16 +118,16 @@
               "y": 0.009999999776482582,
               "z": 80
             },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
             "rotation": {
               "x": 0,
               "y": 0,
               "z": 0,
               "w": 1
-            },
-            "scale": {
-              "x": 1,
-              "y": 1,
-              "z": 1
             },
             "parent": 0
           }
@@ -225,16 +225,24 @@
       "data": {
         "516": {
           "json": {
-            "gizmo": 1
+            "gizmo": 0
           }
         }
       }
     },
     {
-      "name": "inspector::SceneMetadata",
+      "name": "inspector::SceneMetadata-v1",
       "jsonSchema": {
         "type": "object",
         "properties": {
+          "version": {
+            "type": "integer",
+            "serializationType": "optional",
+            "optionalJsonSchema": {
+              "type": "integer",
+              "serializationType": "int32"
+            }
+          },
           "name": {
             "type": "string",
             "serializationType": "optional",
@@ -395,6 +403,43 @@
             "optionalJsonSchema": {
               "type": "boolean",
               "serializationType": "boolean"
+            }
+          },
+          "skyboxConfig": {
+            "type": "object",
+            "serializationType": "optional",
+            "optionalJsonSchema": {
+              "type": "object",
+              "properties": {
+                "fixedTime": {
+                  "type": "integer",
+                  "serializationType": "optional",
+                  "optionalJsonSchema": {
+                    "type": "integer",
+                    "serializationType": "int32"
+                  }
+                },
+                "transitionMode": {
+                  "type": "integer",
+                  "serializationType": "optional",
+                  "optionalJsonSchema": {
+                    "type": "integer",
+                    "enum": [
+                      0,
+                      1
+                    ],
+                    "default": 0,
+                    "serializationType": "enum-int",
+                    "enumObject": {
+                      "0": "TM_FORWARD",
+                      "1": "TM_BACKWARD",
+                      "TM_FORWARD": 0,
+                      "TM_BACKWARD": 1
+                    }
+                  }
+                }
+              },
+              "serializationType": "map"
             }
           },
           "spawnPoints": {
@@ -924,6 +969,7 @@
                 }
               ]
             },
+            "skyboxConfig": {},
             "spawnPoints": [
               {
                 "name": "spawn1",
