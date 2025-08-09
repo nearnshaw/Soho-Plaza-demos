@@ -114,20 +114,20 @@
         "513": {
           "json": {
             "position": {
-              "x": 81.5,
-              "y": 7.75,
+              "x": 79.75,
+              "y": 3.75,
               "z": 111.5
-            },
-            "rotation": {
-              "x": 0.13052618503570557,
-              "y": 0,
-              "z": 0,
-              "w": 0.9914448857307434
             },
             "scale": {
               "x": 1,
               "y": 1,
               "z": 1
+            },
+            "rotation": {
+              "x": -0.12607863545417786,
+              "y": -0.23911762237548828,
+              "z": 0.0990457609295845,
+              "w": 0.9576622247695923
             },
             "parent": 0
           }
@@ -136,19 +136,19 @@
           "json": {
             "position": {
               "x": 125.25,
-              "y": 2,
-              "z": 122.25
+              "y": 2.5,
+              "z": 118.75
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
             },
             "rotation": {
               "x": -0.3061486780643463,
               "y": -0.43558356165885925,
               "z": 0.6597301363945007,
               "w": -0.5303735136985779
-            },
-            "scale": {
-              "x": 1,
-              "y": 1,
-              "z": 1
             },
             "parent": 0
           }
@@ -158,18 +158,18 @@
             "position": {
               "x": 79.5,
               "y": 7.5,
-              "z": 102.5
+              "z": 90.75
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
             },
             "rotation": {
               "x": -0.34150633215904236,
               "y": -0.5208660364151001,
               "z": 0.5120470523834229,
               "w": -0.5915063619613647
-            },
-            "scale": {
-              "x": 1,
-              "y": 1,
-              "z": 1
             },
             "parent": 0
           }
@@ -223,16 +223,58 @@
               "y": 6.75,
               "z": 96.5
             },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
             "rotation": {
-              "x": 0.024986345320940018,
-              "y": -0.717772901058197,
-              "z": 0.6932127475738525,
-              "w": 0.06028030067682266
+              "x": -0.02503124065697193,
+              "y": 0.7177551984786987,
+              "z": -0.693229615688324,
+              "w": -0.060279592871665955
+            },
+            "parent": 0
+          }
+        },
+        "519": {
+          "json": {
+            "position": {
+              "x": 49.75,
+              "y": 1.75,
+              "z": 43.75
             },
             "scale": {
               "x": 1,
               "y": 1,
               "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "parent": 0
+          }
+        },
+        "520": {
+          "json": {
+            "position": {
+              "x": 63.25,
+              "y": 0,
+              "z": 40.75
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
             },
             "parent": 0
           }
@@ -287,6 +329,66 @@
           "json": {
             "states": []
           }
+        },
+        "519": {
+          "json": {
+            "states": [
+              {
+                "clip": "bite",
+                "playing": false,
+                "weight": 1,
+                "speed": 1,
+                "loop": false,
+                "shouldReset": false
+              },
+              {
+                "clip": "swim",
+                "playing": false,
+                "weight": 1,
+                "speed": 1,
+                "loop": false,
+                "shouldReset": false
+              }
+            ]
+          }
+        },
+        "520": {
+          "json": {
+            "states": [
+              {
+                "clip": "Walk",
+                "playing": true,
+                "weight": 1,
+                "speed": 1,
+                "loop": true,
+                "shouldReset": false
+              },
+              {
+                "clip": "TurnIn",
+                "playing": false,
+                "weight": 1,
+                "speed": 1,
+                "loop": false,
+                "shouldReset": false
+              },
+              {
+                "clip": "Talk",
+                "playing": false,
+                "weight": 1,
+                "speed": 1,
+                "loop": false,
+                "shouldReset": false
+              },
+              {
+                "clip": "TurnOut",
+                "playing": false,
+                "weight": 1,
+                "speed": 1,
+                "loop": false,
+                "shouldReset": false
+              }
+            ]
+          }
         }
       }
     },
@@ -308,7 +410,7 @@
         },
         "514": {
           "json": {
-            "src": "assets/asset-packs/single_turret/Turret_01/Turret_01.glb",
+            "src": "assets/asset-packs/campfire/Fireplace_01/Fireplace_01.glb",
             "visibleMeshesCollisionMask": 0,
             "invisibleMeshesCollisionMask": 0
           }
@@ -339,6 +441,20 @@
             "src": "assets/asset-packs/single_turret/Turret_01/Turret_01.glb",
             "visibleMeshesCollisionMask": 0,
             "invisibleMeshesCollisionMask": 0
+          }
+        },
+        "519": {
+          "json": {
+            "src": "assets/scene/Models/shark/shark.glb",
+            "visibleMeshesCollisionMask": 0,
+            "invisibleMeshesCollisionMask": 3
+          }
+        },
+        "520": {
+          "json": {
+            "src": "assets/scene/Models/wenmoon/wenmoon.glb",
+            "visibleMeshesCollisionMask": 0,
+            "invisibleMeshesCollisionMask": 3
           }
         }
       }
@@ -547,6 +663,16 @@
           "json": {
             "value": "Light_Ref_4"
           }
+        },
+        "519": {
+          "json": {
+            "value": "shark"
+          }
+        },
+        "520": {
+          "json": {
+            "value": "wenmoon"
+          }
         }
       }
     },
@@ -594,9 +720,9 @@
         "serializationType": "map"
       },
       "data": {
-        "518": {
+        "0": {
           "json": {
-            "gizmo": 2
+            "gizmo": 0
           }
         }
       }
@@ -1432,7 +1558,9 @@
                   514,
                   515,
                   518,
-                  512
+                  512,
+                  519,
+                  520
                 ]
               },
               {
@@ -1472,6 +1600,14 @@
               },
               {
                 "entity": 512,
+                "children": []
+              },
+              {
+                "entity": 519,
+                "children": []
+              },
+              {
+                "entity": 520,
                 "children": []
               }
             ]
@@ -1718,7 +1854,7 @@
         "0": {
           "json": {
             "id": 0,
-            "value": 0
+            "value": 1
           }
         }
       }
@@ -1759,6 +1895,12 @@
           "json": {}
         },
         "518": {
+          "json": {}
+        },
+        "519": {
+          "json": {}
+        },
+        "520": {
           "json": {}
         }
       }
