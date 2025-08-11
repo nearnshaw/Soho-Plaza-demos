@@ -44,34 +44,26 @@ export function main() {
 
   // simple spot light
   LightSource.create(light_ref, {
-    type: {
-      $case: 'spot',
-      spot: {
-        innerAngle: 30,
-        outerAngle: 60
-      }
-    },
-    intensity: 100000
+    type: LightSource.Type.Spot({
+      innerAngle: 45,
+      outerAngle: 60
+    }),
+    intensity: 150000,
+    color: Color3.Red(),
   })
 
   // Simple point light
   LightSource.create(light_ref2, {
-    type: {
-      $case: 'point',
-      point: {}
-    },
+    type: LightSource.Type.Point({}),
     intensity: 100000
   })
 
   // Red intensity spot light
   LightSource.create(light_ref3, {
-    type: {
-      $case: 'spot',
-      spot: {
-        innerAngle: 30,
-        outerAngle: 60
-      }
-    },
+    type: LightSource.Type.Spot({
+      innerAngle: 30,
+      outerAngle: 60
+    }),
     color: Color3.Red(),
     intensity: 1000000,
     shadow: true
@@ -79,14 +71,11 @@ export function main() {
 
   // Spotlight with a shadow mask
   LightSource.create(light_ref4, {
-    type: {
-      $case: 'spot',
-      spot: {
-        innerAngle: 30,
-        outerAngle: 60
-      }
-    },
-    shadow: true,
+    type: LightSource.Type.Spot({
+      innerAngle: 30,
+      outerAngle: 60
+    }),
+    //shadow: true,
     intensity: 1000000,
     color: Color3.Magenta(),
     shadowMaskTexture: Material.Texture.Common({ src: 'assets/scene/images/lightmask1.png' })
@@ -108,19 +97,6 @@ export function main() {
             $case: 'pbr',
             pbr: {
               albedoColor: Color4.Red()
-            }
-          }
-        }
-      },
-      {
-        path: 'TRex.001',
-        material: {
-          material: {
-            $case: 'pbr',
-            pbr: {
-              albedoColor: Color4.Magenta(),
-              emissiveColor: Color3.Magenta(),
-              emissiveIntensity: 1
             }
           }
         }
@@ -146,7 +122,7 @@ export function main() {
           }
         },
         {
-          path: 'TRex.001',
+          path: 'TRex.0015356rrhdfg',
           material: {
             material: {
               $case: 'pbr',
