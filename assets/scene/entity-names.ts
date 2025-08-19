@@ -10,6 +10,7 @@ export enum EntityNames {
   Light_Ref_2 = "Light_Ref_2",
   Light_Ref_3 = "Light_Ref_3",
   Light_Ref_4 = "Light_Ref_4",
+  dispenser = "dispenser",
   eye_glb = "eye.glb",
   shark = "shark",
   sohoscene_glb = "sohoscene.glb",

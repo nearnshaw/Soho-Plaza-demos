@@ -8,7 +8,11 @@ import {
   pointerEventsSystem,
   InputAction,
   Animator,
-  VideoPlayer
+  VideoPlayer,
+  Tween,
+  EasingFunction,
+  TweenSequence,
+  TweenLoop
 } from '@dcl/sdk/ecs'
 import { LightSource } from '@dcl/sdk/ecs'
 import { EntityNames } from '../assets/scene/entity-names'
@@ -45,11 +49,9 @@ export function main() {
   // simple spot light
   LightSource.create(light_ref, {
     type: LightSource.Type.Spot({
-      innerAngle: 45,
+      innerAngle: 15,
       outerAngle: 60
-    }),
-    intensity: 150000,
-    color: Color3.Red(),
+    })
   })
 
   // Simple point light
@@ -78,7 +80,32 @@ export function main() {
     //shadow: true,
     intensity: 1000000,
     color: Color3.Magenta(),
-    shadowMaskTexture: Material.Texture.Common({ src: 'assets/scene/images/lightmask1.png' })
+    shadowMaskTexture: Material.Texture.Common({ src: 'assets/scene/images/lightmask1.png' }),
+    shadow: true
+  })
+
+  // Spin light
+  Tween.create(light_ref4, {
+    mode: Tween.Mode.Rotate({
+      start: Quaternion.fromEulerDegrees(90, 0, 0),
+      end: Quaternion.fromEulerDegrees(90, -180, 0),
+    }),
+    duration: 20200,
+    easingFunction: EasingFunction.EF_LINEAR,
+  })
+
+  TweenSequence.create(light_ref4, {
+    loop: TweenLoop.TL_RESTART,
+    sequence: [
+      {
+        mode: Tween.Mode.Rotate({
+          start: Quaternion.fromEulerDegrees(90, -180, 0),
+          end: Quaternion.fromEulerDegrees(90, -360, 0),
+        }),
+        duration: 20200,
+        easingFunction: EasingFunction.EF_LINEAR,
+      },
+    ],
   })
 
   ////////////////////////////////

@@ -118,16 +118,16 @@
               "y": 4,
               "z": 111.25
             },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
             "rotation": {
               "x": 0.6347644925117493,
               "y": 0.0041090212762355804,
               "z": 0.20175181329250336,
               "w": 0.7458910346031189
-            },
-            "scale": {
-              "x": 1,
-              "y": 1,
-              "z": 1
             },
             "parent": 0
           }
@@ -136,19 +136,19 @@
           "json": {
             "position": {
               "x": 113.5,
-              "y": 1.25,
+              "y": 2,
               "z": 121
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
             },
             "rotation": {
               "x": 0,
               "y": 0,
               "z": 0.020767925307154655,
               "w": 0.9997843503952026
-            },
-            "scale": {
-              "x": 1,
-              "y": 1,
-              "z": 1
             },
             "parent": 0
           }
@@ -278,6 +278,27 @@
             },
             "parent": 0
           }
+        },
+        "521": {
+          "json": {
+            "position": {
+              "x": 22,
+              "y": 0,
+              "z": 82
+            },
+            "scale": {
+              "x": 1,
+              "y": 1,
+              "z": 1
+            },
+            "rotation": {
+              "x": 0,
+              "y": 0,
+              "z": 0,
+              "w": 1
+            },
+            "parent": 0
+          }
         }
       }
     },
@@ -389,6 +410,20 @@
               }
             ]
           }
+        },
+        "521": {
+          "json": {
+            "states": [
+              {
+                "clip": "Animation",
+                "playing": true,
+                "weight": 1,
+                "speed": 1,
+                "loop": true,
+                "shouldReset": false
+              }
+            ]
+          }
         }
       }
     },
@@ -453,6 +488,13 @@
         "520": {
           "json": {
             "src": "assets/scene/Models/wenmoon/wenmoon.glb",
+            "visibleMeshesCollisionMask": 0,
+            "invisibleMeshesCollisionMask": 3
+          }
+        },
+        "521": {
+          "json": {
+            "src": "assets/custom/dispenser/dispenser.glb",
             "visibleMeshesCollisionMask": 0,
             "invisibleMeshesCollisionMask": 3
           }
@@ -673,6 +715,11 @@
           "json": {
             "value": "wenmoon"
           }
+        },
+        "521": {
+          "json": {
+            "value": "dispenser"
+          }
         }
       }
     },
@@ -720,7 +767,7 @@
         "serializationType": "map"
       },
       "data": {
-        "519": {
+        "513": {
           "json": {
             "gizmo": 1
           }
@@ -1560,7 +1607,8 @@
                   518,
                   512,
                   519,
-                  520
+                  520,
+                  521
                 ]
               },
               {
@@ -1608,6 +1656,10 @@
               },
               {
                 "entity": 520,
+                "children": []
+              },
+              {
+                "entity": 521,
                 "children": []
               }
             ]
@@ -1902,6 +1954,29 @@
         },
         "520": {
           "json": {}
+        },
+        "521": {
+          "json": {}
+        }
+      }
+    },
+    {
+      "name": "inspector::CustomAsset",
+      "jsonSchema": {
+        "type": "object",
+        "properties": {
+          "assetId": {
+            "type": "string",
+            "serializationType": "utf8-string"
+          }
+        },
+        "serializationType": "map"
+      },
+      "data": {
+        "521": {
+          "json": {
+            "assetId": "984c2049-8188-43e1-8dad-1c8125096ff5"
+          }
         }
       }
     }
